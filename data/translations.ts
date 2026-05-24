@@ -1,0 +1,47 @@
+import type { Language } from '@/types'
+
+export const t = {
+  appTitle:              { en: 'GIAIC AI Tracker', ru: 'GIAIC AI Tracker', ur: 'GIAIC AI ٹریکر' },
+  dayPlan:               { en: '15-DAY PLAN', ru: '15 Din ka Plan', ur: '15 روزہ پلان' },
+  quickCrashCourse:      { en: 'Quick Crash Course', ru: 'Quick Crash Course', ur: 'فوری کریش کورس' },
+  today:                 { en: 'Today', ru: 'Aaj', ur: 'آج' },
+  completed:             { en: 'completed', ru: 'mukammal', ur: 'مکمل' },
+  study:                 { en: 'Study', ru: 'Parhai', ur: 'پڑھائی' },
+  notes:                 { en: 'Notes', ru: 'Notes', ur: 'نوٹس' },
+  quiz:                  { en: 'Quiz (20)', ru: 'Quiz (20)', ur: 'کوئز (20)' },
+  startQuiz:             { en: 'Start Quiz →', ru: 'Quiz Shuru Karo →', ur: 'کوئز شروع کریں →' },
+  answered:              { en: 'answered', ru: 'jawab diye', ur: 'جوابات' },
+  keyTopics:             { en: 'Key Topics', ru: 'Ahem Topics', ur: 'اہم موضوعات' },
+  studyLinks:            { en: 'Study Links', ru: 'Parhai ke Links', ur: 'پڑھائی کے لنکس' },
+  examLink:              { en: 'Exam Link', ru: 'Imtihan ka Link', ur: 'امتحان کا لنک' },
+  freeWrite:             { en: 'Free Write', ru: 'Azad Likhna', ur: 'آزاد لکھنا' },
+  structured:            { en: 'Structured', ru: 'Tarteebi', ur: 'ترتیبی' },
+  keyConcept:            { en: 'Key Concept', ru: 'Ahem Fikr', ur: 'اہم تصور' },
+  importantPoints:       { en: 'Important Points', ru: 'Zaroori Nuktay', ur: 'ضروری نکات' },
+  myQuestions:           { en: 'My Questions', ru: 'Mere Sawalat', ur: 'میرے سوالات' },
+  exportNotes:           { en: '⬇ Export Notes', ru: 'Notes Download Karo', ur: 'نوٹس ڈاؤنلوڈ کریں' },
+  freeWritePlaceholder:  { en: 'Write your notes freely...', ru: 'Azadi se likho...', ur: 'آزادی سے لکھیں...' },
+  keyConceptPlaceholder: { en: 'Main concept of today...', ru: 'Aaj ka ahem concept...', ur: 'آج کا اہم تصور...' },
+  pointsPlaceholder:     { en: '• Point 1\n• Point 2', ru: '• Nuktah 1\n• Nuktah 2', ur: '• نکتہ 1\n• نکتہ 2' },
+  questionsPlaceholder:  { en: 'What did I not understand?', ru: 'Kya samajh nahi aaya?', ur: 'کیا سمجھ نہیں آیا؟' },
+  locked:                { en: '🔒 Locked', ru: '🔒 Band', ur: '🔒 بند' },
+  examDay:               { en: '📝 EXAM', ru: '📝 Imtihan', ur: '📝 امتحان' },
+  reviewDay:             { en: '🔄 Review', ru: '🔄 Revision', ur: '🔄 مراجعت' },
+  correct:               { en: '✅ Correct!', ru: '✅ Sahi!', ur: '✅ درست!' },
+  incorrect:             { en: '❌ Incorrect', ru: '❌ Galat', ur: '❌ غلط' },
+  explanation:           { en: 'Explanation:', ru: 'Wazahat:', ur: 'وضاحت:' },
+  next:                  { en: 'Next →', ru: 'Agla →', ur: 'اگلا →' },
+  previous:              { en: '← Prev', ru: '← Pichla', ur: '← پچھلا' },
+  yourScore:             { en: 'Your Score', ru: 'Aapka Score', ur: 'آپ کا اسکور' },
+  retakeQuiz:            { en: 'Retake Quiz', ru: 'Dobara Quiz Do', ur: 'دوبارہ کوئز دیں' },
+  markComplete:          { en: '✓ Mark Complete', ru: '✓ Mukammal Karo', ur: '✓ مکمل کریں' },
+  estimated:             { en: 'Est.', ru: 'Andaza', ur: 'تخمینہ' },
+  overallProgress:       { en: 'Overall Progress', ru: 'Mujmoo Taraqqi', ur: 'مجموعی پیشرفت' },
+  aiNotes:               { en: '🤖 AI Study Notes', ru: '🤖 AI ke Notes', ur: '🤖 AI کے نوٹس' },
+  section:               { en: 'Section', ru: 'Hissa', ur: 'حصہ' },
+  crashCourseDay:        { en: '⚡ Crash Course', ru: '⚡ Crash Course', ur: '⚡ کریش کورس' },
+} as const
+
+export function tr(key: keyof typeof t, lang: Language): string {
+  return t[key][lang]
+}
