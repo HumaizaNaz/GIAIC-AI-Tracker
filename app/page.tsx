@@ -8,10 +8,12 @@ import LanguageToggle from '@/components/LanguageToggle'
 import Sidebar from '@/components/Sidebar'
 import DayPanel from '@/components/DayPanel'
 import type { QuizQuestion } from '@/types'
+import { thesisQuestions } from '@/data/questions/thesis'
 
-// Quiz questions — generated daily by agent (add per day below)
+// Quiz questions — thesis questions pre-loaded; other days added by daily agent
 const questions: Record<number, QuizQuestion[]> = {
-  // day 0, 1, 2 ... will be added by daily agent
+  ...thesisQuestions,
+  // day 0, 3, 4, 5, 7+ ... will be added by daily agent
 }
 
 export default function Home() {

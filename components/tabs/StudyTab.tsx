@@ -6,11 +6,13 @@ export default function StudyTab({ day, lang }: { day: DayContent; lang: Languag
   return (
     <div className={`space-y-4 ${lang === 'ur' ? 'urdu-text' : ''}`}>
 
-      {/* AI Notes — crash course */}
-      {day.type === 'crash-course' && day.notes?.[lang] && (
+      {/* Exam Notes — shown for any day type if notes exist */}
+      {day.notes?.[lang] && (
         <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4">
-          <h3 className="text-emerald-700 text-sm font-bold mb-3">🤖 {tr('aiNotes', lang)}</h3>
-          <div className="text-emerald-900 text-sm leading-relaxed whitespace-pre-wrap">{day.notes[lang]}</div>
+          <h3 className="text-emerald-700 text-sm font-bold mb-3">
+            {day.type === 'crash-course' ? '🤖' : '📚'} {tr('aiNotes', lang)}
+          </h3>
+          <div className="text-emerald-900 text-sm leading-relaxed whitespace-pre-wrap font-mono text-xs">{day.notes[lang]}</div>
         </div>
       )}
 
